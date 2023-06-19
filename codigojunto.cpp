@@ -127,34 +127,3 @@ class Logger {
 
         } formatter_;
 };
-
-
-Logger logger(Debug, "[{time}] {level} [{file}.{function}.{lineno}] {message}"); // Cria uma instância do logger com nível de log Debug
-
-void setup() {
-    Serial.begin(115200);
-
-    if (!rtc.begin()) {
-        Serial.println("Erro ao inicializar o RTC");
-        while (1);
-    }
-
-    // Verifica se o RTC está funcionando e é necessário definir a hora
-    if (!rtc.isrunning()) {
-        Serial.println("RTC não está funcionando! Defina a hora correta no formato [ano, mês, dia, hora, minuto, segundo]");
-        rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); // Define a hora do RTC com a hora da compilação
-    }
-
-    Serial.println("\nIniciando o logger...");
-}
-
-void loop() {
-    log(Debug, "This is a debug message");
-    log(Info, "Esse e o numero %d: %d", 3, 3);
-    log(Warning, "Contagem regressiva: %d, %d, %d", 3, 2, 1);
-    log(Error, "Erro encontrado: %s", "Valor invalido");
-    log(Critical, "This is a critical message");
-
-    delay(5000);
-    Serial.println("\n\n");
-}
