@@ -22,7 +22,7 @@
 
 #define RESET "\033[0m"             /* Reset */
 
-#define log(level, text, ...) \
+#define LOG(level, text, ...) \
     do { \
         char buffer[BUFFER_SIZE]; \
         std::sprintf(buffer, text, ##__VA_ARGS__); \

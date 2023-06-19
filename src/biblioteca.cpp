@@ -1,3 +1,21 @@
+/**
+ * @file    main.cpp
+ * @brief   This is the main file of the project.
+ * @details It contains the implementation of the main functionality.
+ * 
+ * @author  Marcos Helbert
+ * @date    May, 2023
+ * @version 1.0
+ *
+ * @section LICENSE
+ *
+ * This program is proprietary software; all rights are reserved to the
+ * author, Marcos Helbert. Unauthorized copying or distribution of this
+ * program, or any portion of it, is strictly prohibited.
+ *
+ * For more information about licensing, please contact the author at
+ * marcoshhelbert@gmail.com.
+ */
 #define BUFFER_SIZE 256             /* Tamanho do buffer de log */
 
 #define TEXT_BOLD "\033[1m"         /* Bold on/off */
