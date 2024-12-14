@@ -9,9 +9,9 @@ void setup()
 
     Serial.println("\n");
     LOG(Debug, "This is a debug message");
-    LOG(Info, "Esse e o numero %d: %d", 3, 3);
-    LOG(Warning, "Contagem regressiva: %d, %d, %d", 3, 2, 1);
-    LOG(Error, "Erro encontrado: %s", "Valor invalido");
+    LOG(Info, "This is the number %d: %d", 3, 3);
+    LOG(Warning, "Countdown: %d, %d, %d", 3, 2, 1);
+    LOG(Error, "Error encountered: %s", "Value invalid");
     LOG(Critical, "This is a critical message");
 }
 
