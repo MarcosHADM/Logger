@@ -3,7 +3,8 @@
 
 Logger logger(Debug, "[{time}] {level} [{file}.{function}.{lineno}] {message}"); // Cria uma instância do logger com nível de log Info
 
-/*void setup() {
+void setup()
+{
     Serial.begin(115200);
 
     Serial.println("\n");
@@ -14,37 +15,6 @@ Logger logger(Debug, "[{time}] {level} [{file}.{function}.{lineno}] {message}");
     LOG(Critical, "This is a critical message");
 }
 
-void loop() {
-    
-
-    delay(5000);
-    //Serial.println("\n\n");
-}
-*/
-
-double currentTemperature = 20.0; // Temperatura inicial
-const double targetTemperature = 25.0;
-const double heatingRate = 0.1; // Taxa de aquecimento por segundo
-const double coolingRate = 0.05; // Taxa de resfriamento por segundo
-
-void setup() {
-    Serial.begin(115200);
-    delay(1000);
-    LOG(Info, "Sistema de controle de temperatura iniciado");
-}
-
-void loop() {
-    double temperatureDifference = targetTemperature - currentTemperature;
-
-    if (temperatureDifference > 0.0) {
-        // Aquecer
-        currentTemperature += heatingRate;
-        LOG(Info, "Aquecedor ligado - Temperatura atual: %.1f", currentTemperature);
-    } else {
-        // Resfriar
-        currentTemperature -= coolingRate;
-        LOG(Info, "Aquecedor desligado - Temperatura atual: %.1f", currentTemperature);
-    }
-
-    delay(1000);
+void loop()
+{
 }
